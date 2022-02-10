@@ -1,0 +1,500 @@
+<html>
+<head><meta charset="utf-8">
+	<title>kolaroid creator @ kolabear.co.uk</title>
+</head>
+<body>
+<p><img alt="" src="/mrbear.svg" style="width: 256px; height: 128px;" /></p>
+
+<p>(Under Construction, Come Back Later....)</p>
+
+<p><strong>kolariod size in pixels&nbsp;:</strong></p>
+<textarea id="output_script" cols="50" name="output_script" rows="50" hidden>
+	       <script>
+                var ball0   = document.querySelector('.ball0');
+                 var ball1   = document.querySelector('.ball1');
+                  var ball2   = document.querySelector('.ball2');
+                   var ball3   = document.querySelector('.ball3');
+                    var ball4   = document.querySelector('.ball4');
+                     var ball5   = document.querySelector('.ball5');
+                      var ball6   = document.querySelector('.ball6');
+                       var ball7   = document.querySelector('.ball7');
+                        var ball8   = document.querySelector('.ball8');
+                         var ball9  = document.querySelector('.ball9');
+                          var ball10   = document.querySelector('.ball10');
+                           var ball11   = document.querySelector('.ball11');
+                            var ball12   = document.querySelector('.ball12');
+                             var ball13   = document.querySelector('.ball13');
+                              var ball14   = document.querySelector('.ball14');
+                               var ball15   = document.querySelector('.ball15');
+                                var ball16   = document.querySelector('.ball16');
+                                 var ball17   = document.querySelector('.ball17');
+                                  var ball18   = document.querySelector('.ball18');
+                                   var ball19   = document.querySelector('.ball19');
+                                    var ball20   = document.querySelector('.ball20');
+                                    
+                                    
+                                       
+                 var ball21   = document.querySelector('.ball21');
+                  var ball22   = document.querySelector('.ball22');
+                   var ball23   = document.querySelector('.ball23');
+                    var ball24   = document.querySelector('.ball24');
+                     var ball25   = document.querySelector('.ball25');
+                      var ball26   = document.querySelector('.ball26');
+                       var ball27   = document.querySelector('.ball27');
+                        var ball28   = document.querySelector('.ball28');
+                         var ball29  = document.querySelector('.ball29');
+                          var ball30   = document.querySelector('.ball30');
+                           var ball31   = document.querySelector('.ball31');
+                            var ball32   = document.querySelector('.ball32');
+                             var ball33   = document.querySelector('.ball33');
+                              var ball34   = document.querySelector('.ball34');
+                               var ball35   = document.querySelector('.ball35');
+                                var ball36   = document.querySelector('.ball36');
+                                 var ball37   = document.querySelector('.ball37');
+                                  var ball38   = document.querySelector('.ball38');
+                                   var ball39   = document.querySelector('.ball39');
+                                    var ball40   = document.querySelector('.ball40');
+                                       
+                 var ball41   = document.querySelector('.ball41');
+                  var ball42   = document.querySelector('.ball42');
+                   var ball43   = document.querySelector('.ball43');
+                    var ball44   = document.querySelector('.ball44');
+                     var ball45   = document.querySelector('.ball45');
+                      var ball46   = document.querySelector('.ball46');
+                       var ball47   = document.querySelector('.ball47');
+                        var ball48   = document.querySelector('.ball48');
+                         var ball49  = document.querySelector('.ball49');
+                          var ball50   = document.querySelector('.ball50');
+                           
+var garden = document.querySelector('.garden');
+var output = document.querySelector('.output');
+
+var maxX = garden.clientWidth  - ball0.clientWidth;
+var maxY = garden.clientHeight - ball0.clientHeight;
+function handleOrientation(event) {
+  var x = event.beta;  // In degree in the range [-180,180)
+  var y = event.gamma; // In degree in the range [-90,90)
+  var shift = 0.0;
+  var flip = false
+  var gyroPresent = false;
+
+    if(event.alpha || event.beta || event.gamma){gyroPresent = true}
+if (gyroPresent == false){
+           document.getElementById("tiltable").src="https://www.kolabear.co.uk/no_sensor.png";
+       }
+       
+  if (x >  90) { x =  90};
+  if (x < -90) { x = -90};
+
+  if (y <-.2) {shift = shift =0;flip = false}
+  if (y >.2) {shift =shift =0.;flip=true}
+  if (y <-.4) {shift = shift =0.001}
+  if (y >.4) {shift = shift =0.01} 
+  if (y <-.6) {shift = shift = 0.02}
+  if (y >.6) {shift = shift = 0.02}
+  if (y <-.8) {shift = shift = 0.03}
+  if (y >.8) {shift = shift = 0.03}
+  if (y <-1.0) {shift = shift = 0.04}
+  if (y >1.0) {shift = shift = 0.04}
+  if (y <-1.2) {shift = shift = 0.05}
+  if (y >1.2) {shift = shift = 0.05}
+  if (y <-1.4) {shift = shift = 0.06}
+  if (y >1.4) {shift = shift = 0.06}
+  if (y <-1.6) {shift = shift = 0.07}
+  if (y >1.6) {shift = shift = 0.07}
+  if (y <-1.8) {shift = shift = 0.08}
+  if (y >1.8) {shift = shift = 0.08}
+  if (y <-2.0) {shift = shift = 0.09}
+  if (y >2.0) {shift = shift = 0.09}
+  if (y <-2.1) {shift = shift = 0.10}
+  if (y >2.1) {shift = shift = 0.10}
+  if (y <-2.2) {shift = shift = 0.11}
+  if (y >2.2) {shift = shift = 0.11}
+  if (y <-2.3) {shift = shift = 0.12}
+  if (y >2.3) {shift = shift = 0.12}
+  
+  
+  // ball50.style.left =  + "px";// stays centred
+  if (flip == true){
+    ball49.style.left = ball50.style.left = (shift +shift +256) + "px";
+    ball48.style.left = ball50.style.left = (shift +shift*2 +256) + "px";
+    ball47.style.left = ball50.style.left = (shift +shift*3 +256) + "px";
+    ball46.style.left = ball50.style.left = (shift +shift*4 +256) + "px";
+    ball45.style.left = ball50.style.left = (shift +shift*5 +256) + "px";
+    ball44.style.left = ball50.style.left = (shift +shift*6 +256) + "px";
+    ball43.style.left = ball50.style.left = (shift +shift*7 +256) + "px";
+    ball42.style.left = ball50.style.left = (shift +shift*8 +256) + "px";
+    ball41.style.left = ball50.style.left = (shift +shift*9 +256) + "px";
+    ball40.style.left = ball50.style.left = (shift +shift*10 +256) + "px";
+    ball39.style.left = ball50.style.left = (shift +shift*11 +256) + "px";
+    ball38.style.left = ball50.style.left = (shift +shift*12 +256) + "px";
+    ball37.style.left = ball50.style.left = (shift +shift*13 +256) + "px";
+    ball36.style.left = ball50.style.left = (shift +shift*14 +256) + "px";
+    ball35.style.left = ball50.style.left = (shift +shift*15 +256) + "px";
+    ball34.style.left = ball50.style.left = (shift +shift*16 +256) + "px";
+    ball33.style.left = ball50.style.left = (shift +shift*17 +256) + "px";
+    ball32.style.left = ball50.style.left = (shift +shift*18 +256) + "px";
+    ball31.style.left = ball50.style.left = (shift +shift*19 +256) + "px";
+    ball30.style.left = ball50.style.left = (shift +shift*20 +256) + "px";
+    ball29.style.left = ball50.style.left = (shift +shift*21 +256) + "px";
+    ball28.style.left = ball50.style.left = (shift +shift*22 +256) + "px";
+    ball27.style.left = ball50.style.left = (shift +shift*23 +256) + "px";
+    ball26.style.left = ball50.style.left = (shift +shift*24 +256) + "px";
+    ball25.style.left = ball50.style.left = (shift +shift*25 +256) + "px";
+    ball24.style.left = ball50.style.left = (shift +shift*26 +256) + "px";
+    ball23.style.left = ball50.style.left = (shift +shift*27 +256) + "px";
+    ball22.style.left = ball50.style.left = (shift +shift*28 +256) + "px";
+    ball21.style.left = ball50.style.left = (shift +shift*29 +256) + "px";
+    ball20.style.left = ball50.style.left = (shift +shift*30 +256) + "px";
+    ball19.style.left = ball50.style.left = (shift +shift*31 +256) + "px";
+    ball18.style.left = ball50.style.left = (shift +shift*32 +256) + "px";
+    ball17.style.left = ball50.style.left = (shift +shift*33 +256) + "px";
+    ball16.style.left = ball50.style.left = (shift +shift*34 +256) + "px";
+    ball15.style.left = ball50.style.left = (shift +shift*35 +256) + "px";
+    ball14.style.left = ball50.style.left = (shift +shift*36 +256) + "px";
+    ball13.style.left = ball50.style.left = (shift +shift*37 +256) + "px";
+    ball12.style.left = ball50.style.left = (shift +shift*38 +256) + "px";
+    ball11.style.left = ball50.style.left = (shift +shift*39 +256) + "px";
+    ball10.style.left = ball50.style.left = (shift +shift*40 +256) + "px";
+    ball9.style.left = ball50.style.left = (shift +shift*41 +256) + "px";
+    ball8.style.left = ball50.style.left = (shift +shift*42+256) + "px";
+    ball7.style.left = ball50.style.left = (shift +shift*43 +256) + "px";
+    ball6.style.left = ball50.style.left = (shift +shift*44 +256) + "px";
+    ball5.style.left = ball50.style.left = (shift +shift*44 +256) + "px";
+    ball4.style.left = ball50.style.left = (shift +shift*45 +256) + "px";
+    ball3.style.left = ball50.style.left = (shift +shift*46 +256) + "px";
+    ball2.style.left = ball50.style.left = (shift +shift*47 +256) + "px";
+    ball1.style.left = ball50.style.left = (shift +shift*48 +256) + "px";
+      ball0.style.left = ball50.style.left = (shift +shift*48 +256) + "px";
+  }else{
+     ball49.style.left = ball50.style.left = (shift -shift +256) + "px";
+    ball48.style.left = ball50.style.left = (shift -shift*2 +256) + "px";
+    ball47.style.left = ball50.style.left = (shift -shift*3 +256) + "px";
+    ball46.style.left = ball50.style.left = (shift -shift*4 +256) + "px";
+    ball45.style.left = ball50.style.left = (shift -shift*5 +256) + "px";
+    ball44.style.left = ball50.style.left = (shift -shift*6 +256) + "px";
+    ball43.style.left = ball50.style.left = (shift -shift*7 +256) + "px";
+    ball42.style.left = ball50.style.left = (shift -shift*8 +256) + "px";
+    ball41.style.left = ball50.style.left = (shift -shift*9 +256) + "px";
+    ball40.style.left = ball50.style.left = (shift -shift*10 +256) + "px";
+    ball39.style.left = ball50.style.left = (shift -shift*11 +256) + "px";
+    ball38.style.left = ball50.style.left = (shift -shift*12 +256) + "px";
+    ball37.style.left = ball50.style.left = (shift -shift*13 +256) + "px";
+    ball36.style.left = ball50.style.left = (shift -shift*14 +256) + "px";
+    ball35.style.left = ball50.style.left = (shift -shift*15 +256) + "px";
+    ball34.style.left = ball50.style.left = (shift -shift*16 +256) + "px";
+    ball33.style.left = ball50.style.left = (shift -shift*17 +256) + "px";
+    ball32.style.left = ball50.style.left = (shift -shift*18 +256) + "px";
+    ball31.style.left = ball50.style.left = (shift -shift*19 +256) + "px";
+    ball30.style.left = ball50.style.left = (shift -shift*20 +256) + "px";
+    ball29.style.left = ball50.style.left = (shift -shift*21 +256) + "px";
+    ball28.style.left = ball50.style.left = (shift -shift*22 +256) + "px";
+    ball27.style.left = ball50.style.left = (shift -shift*23 +256) + "px";
+    ball26.style.left = ball50.style.left = (shift -shift*24 +256) + "px";
+    ball25.style.left = ball50.style.left = (shift -shift*25 +256) + "px";
+    ball24.style.left = ball50.style.left = (shift -shift*26 +256) + "px";
+    ball23.style.left = ball50.style.left = (shift -shift*27 +256) + "px";
+    ball22.style.left = ball50.style.left = (shift -shift*28 +256) + "px";
+    ball21.style.left = ball50.style.left = (shift -shift*29 +256) + "px";
+    ball20.style.left = ball50.style.left = (shift -shift*30 +256) + "px";
+    ball19.style.left = ball50.style.left = (shift -shift*31 +256) + "px";
+    ball18.style.left = ball50.style.left = (shift -shift*32 +256) + "px";
+    ball17.style.left = ball50.style.left = (shift -shift*33 +256) + "px";
+    ball16.style.left = ball50.style.left = (shift -shift*34 +256) + "px";
+    ball15.style.left = ball50.style.left = (shift -shift*35 +256) + "px";
+    ball14.style.left = ball50.style.left = (shift -shift*36 +256) + "px";
+    ball13.style.left = ball50.style.left = (shift -shift*37 +256) + "px";
+    ball12.style.left = ball50.style.left = (shift -shift*38 +256) + "px";
+    ball11.style.left = ball50.style.left = (shift -shift*39 +256) + "px";
+    ball10.style.left = ball50.style.left = (shift -shift*40 +256) + "px";
+    ball9.style.left = ball50.style.left = (shift -shift*41 +256) + "px";
+    ball8.style.left = ball50.style.left = (shift -shift*42+256) + "px";
+    ball7.style.left = ball50.style.left = (shift -shift*43 +256) + "px";
+    ball6.style.left = ball50.style.left = (shift -shift*44 +256) + "px";
+    ball5.style.left = ball50.style.left = (shift -shift*44 +256) + "px";
+    ball4.style.left = ball50.style.left = (shift -shift*45 +256) + "px";
+    ball3.style.left = ball50.style.left = (shift -shift*46 +256) + "px";
+    ball2.style.left = ball50.style.left = (shift -shift*47 +256) + "px";
+    ball1.style.left = ball50.style.left = (shift -shift*48 +256) + "px";
+  ball0.style.left = ball50.style.left = (shift +shift*48 +256) + "px";
+
+
+
+
+
+
+
+}
+
+}
+window.addEventListener('deviceorientation', handleOrientation);
+
+            </script>
+
+<p></p>
+</body>
+</html>
+</textarea>	       
+	        
+
+<p>width :&nbsp;<input id="width_1" name="width_1" type="text" value="512" /></p>
+
+<p>height:&nbsp;<input id="height_1" name="height_1" type="text" value="420" /><br />
+&nbsp;</p>
+<p>width + outline :&nbsp;<input id="width_2" name="width_2" type="text" value="620" /></p>
+
+<p>height + outline :&nbsp;<input id="height_2" name="height_2" type="text" value="568" /><br />
+&nbsp;</p>
+<p><strong>Kolaroid position on page:</strong></p>
+
+<p>left :&nbsp; &nbsp; &nbsp;<input id="left_1" name="left_1" type="text" value="0" /></p>
+
+<p>top :&nbsp; &nbsp; &nbsp;<input id="top_1" name="top_1" type="text" value="0" /><br />
+&nbsp;</p>
+
+<p><strong>Kolaroid FileName :</strong></p>
+
+<p><input id="filename_1" name="filename" type="text" /><strong>&nbsp;0001.png</strong> to <strong>00047.png</strong></p>
+
+<p><strong>Kolaroid Outline Shape :</strong></p>
+
+<p><strong><input checked="checked" id="standard_1" name="standard" type="checkbox" value="true" /></strong>Standard Kolariod</p>
+
+<p><input id="cloud_1" name="cloud" type="checkbox" value="false" />Cloud Shape</p>
+
+<p><input id="mail_1" name="mail" type="checkbox" value="false" />Email</p>
+
+<p><input id="dotty_1" name="dotty" type="checkbox" value="false" />Dotted Lines</p>
+
+<p><img alt="" id="bulb_1" src="/redd.png" style="width: 30px; height: 30px;" />Status :&nbsp;<input id="status" name="ready" type="text" value="not ready" /></p>
+
+<p><input id="go_1" onclick="saveDynamicDataToFile();" type="button" value="Create a Kolaroid" /></p>
+
+<p><strong>Kolariod Maker By</strong> Edward J. Taylor.</p>
+
+<p>ikolabear@icloud.com</p>
+
+<p><textarea id="output_area" cols="50" name="output" rows="50" hidden>
+    
+</textarea></p>
+<script src="FileSaver.js"></script><script>
+	function saveDynamicDataToFile() {
+	    var bulb = document.getElementById("bulb_1");
+            var kola_outline = "https://www.kolabear.co.uk/outline.png"
+            bulb.src = "https://www.kolabear.co.uk/orange.png";
+	        //showed orange bulb ...
+	        //ready to start working...
+	        var value = null;
+	        document.getElementById("output_area").value = document.getElementById("output_area").value + "<!DOCTYPE html>" + "\n";
+	        document.getElementById("output_area").value = document.getElementById("output_area").value + "<html>" + "\n";
+	        //added the first line innit bro
+ 	        document.getElementById("status").value = "- added HTML Tags";
+ 	        document.getElementById("output_area").value = document.getElementById("output_area").value + "<html>" + "\n";
+ 	        document.getElementById("output_area").value = document.getElementById("output_area").value + "<head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex, nofollow\">" + "\n";
+ 	        document.getElementById("status").value = "- adding CSS Stuff";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "<style type=\"text/css\">" + "\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "body {"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "padding: 0"+"\n";;
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "margin: 0"+"\n";;
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "}"+"\n";	    
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "svg:not(:root) {" +"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "display: block;"+ "\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "}"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + ".playable-code {"+"\n";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "background-color: #f4f7f8;"+"\n"+"border: none;"+"\n"+"border-left: 6px solid #558abb;"+"\n"+"border-width: medium medium medium 6px;";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "\n" +"color: #4d4e53;" +"\n" + "height: 100px;" + "\n" + "width: 90%;" + "\n" + "padding: 10px 10px 0;" +"\n" +"}";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "\n"+".playable-canvas {" + "\n" + "border: 1px solid #4d4e53;" +"\n" + "border-radius: 2px;" +"\n" + " }" +"\n"+ ".playable-buttons {";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "\n"+"text-align: right;" +"\n" + "width: 90%;" + "\n" + "padding: 5px 10px 5px 26px;" + "\n" + "}";
+	        document.getElementById("status").value = "- added some smart things";
+	        document.getElementById("status").value = "- looping thru the images";
+	        
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "\n"+"#tiltable" "{" +"\n" +"top   :" +"0"+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "left   :" +"0"+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "width   :" +document.getElementById("width_1").value+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "height   :" +document.getElementById("height_1").value+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "backface-visibility : hidden;" +"\n" + "transition : all 0.5s;webkit-transition: all 0.5s;" +"\n" +"z-index : "+ z_index+ ";"+ "\n" + "position : absolute;" + "\n" + "}" + "\n";
+	        var tiltnumber = 1;
+	        var z_index = 50
+	        for (let i = 0; i < 47; i++) {
+
+	        document.getElementById("status").value = "- looping thru the images";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "\n"+"#tiltable"+tiltnumber+ "{" +"\n" +"top   :" +"0"+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "left   :" +"0"+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "width   :" +document.getElementById("width_1").value+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "height   :" +document.getElementById("height_1").value+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "backface-visibility : hidden;" +"\n" + "transition : all 0.5s;webkit-transition: all 0.5s;" +"\n" +"z-index : "+ z_index+ ";"+ "\n" + "position : absolute;" + "\n" + "}" + "\n";
+	        z_index -=1
+	        tiltnumber+=1;
+	        }
+	        var offset_value_x = 0
+	        var offset_value_y = 0
+	    
+	        document.getElementById("status").value = "- done image CSS";
+	         document.getElementById("output_area").value  = document.getElementById("output_area").value+"\n"+ ".outline {" +"\n"+ "top   :" +offset_value_y +"px;"+"\n";
+	         document.getElementById("output_area").value  = document.getElementById("output_area").value+"left   :" +offset_value_x +"px;"+"\n";
+	         document.getElementById("output_area").value  = document.getElementById("output_area").value+"width   :" + document.getElementById("width_2").value +"px;"+"\n";
+	         document.getElementById("output_area").value  = document.getElementById("output_area").value+"height   :" + document.getElementById("height_2").value  +"px;"+"\n";
+	         document.getElementById("output_area").value  = document.getElementById("output_area").value + "backface-visibility : hidden;" +"\n" + "transition : all 0.5s;webkit-transition: all 0.5s;" +"\n" +"z-index:"+ "55"+ "\n" + "position : absolute;" + "\n" + "}" + "\n";
+	        document.getElementById("status").value = "- added boarder";
+	        document.getElementById("status").value = "- adding football pitch";  
+	        
+	        document.getElementById("status").value = "- adding playing field";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "\n"+".garden"+ "{" +"\n" +"top   :" +document.getElementById("top_1").value+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "left   :" +document.getElementById("left_1").value+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "width   :" +document.getElementById("width_2").value+128+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "height   :" +document.getElementById("height_2").value+128+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "position : relative;" + "\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "border : 0px solid #CCC;" + "\n" + "border-radius: 0px;" + "\n" + "}"+"\n";
+	        
+	        var footballnumber = 0
+	        
+	        for (let i = 0; i < 48; i++) {
+	        document.getElementById("status").value = "- adding spare footballs";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "\n"+".ball"+footballnumber+ "{" +"\n" +"top   :" +"90"+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "left   :" +"90"+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "width   :" +"20"+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "height   :" +"20"+"px;"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "position : absolute;" + "\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "background : white;"+"\n" +"border-radius: 100%;"+"\n"+" }";
+	        footballnumber +=1
+	        }
+	        
+	        
+	        
+	        
+	        document.getElementById("status").value = "- doing HTML source";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "</style>"+"\n";
+	        document.getElementById("output_area").value  = document.getElementById("output_area").value + "</head>"+"\n";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<body>"+"\n";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"garden\">";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"outliner\"><img class=\"outline\" id=\"outline\" src=\"" + kola_outline +"\""" /></div>" + "\n";
+            
+            
+            value = "0001";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball\"><img class=\"tiltable\" id=\"tiltable\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0002";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball1\"><img class=\"tiltable1\" id=\"tiltable1\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0003";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball2\"><img class=\"tiltable2\" id=\"tiltable2\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0004";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball3\"><img class=\"tiltable3\" id=\"tiltable3\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0005";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball4\"><img class=\"tiltable4\" id=\"tiltable4\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0006";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball5\"><img class=\"tiltable5\" id=\"tiltable5\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0007";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball6\"><img class=\"tiltable6\" id=\"tiltable6\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0008";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball7\"><img class=\"tiltable7\" id=\"tiltable7\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0009";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball8\"><img class=\"tiltable8\" id=\"tiltable8\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0010";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball9\"><img class=\"tiltable9\" id=\"tiltable9\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0011";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball10\"><img class=\"tiltable10\" id=\"tiltable10\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0012";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball11\"><img class=\"tiltable11\" id=\"tiltable11\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0013";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball12\"><img class=\"tiltable12\" id=\"tiltable12\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0014";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball13\"><img class=\"tiltable13\" id=\"tiltable13\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0015";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball14\"><img class=\"tiltable14\" id=\"tiltable14\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0016";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball15\"><img class=\"tiltable15\" id=\"tiltable15\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0017";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball16\"><img class=\"tiltable16\" id=\"tiltable16\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0018";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball17\"><img class=\"tiltable17\" id=\"tiltable17\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0019";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball18\"><img class=\"tiltable18\" id=\"tiltable18\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0020";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball19\"><img class=\"tiltable19\" id=\"tiltable19\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0021";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball20\"><img class=\"tiltable20\" id=\"tiltable20\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0022";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball21\"><img class=\"tiltable21\" id=\"tiltable21\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0023";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball22\"><img class=\"tiltable22\" id=\"tiltable22\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0024";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball23\"><img class=\"tiltable23\" id=\"tiltable23\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0025";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball24\"><img class=\"tiltable24\" id=\"tiltable24\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0026";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball25\"><img class=\"tiltable25\" id=\"tiltable25\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0027";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball26\"><img class=\"tiltable26\" id=\"tiltable26\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0028";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball27\"><img class=\"tiltable27\" id=\"tiltable27\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0029";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball28\"><img class=\"tiltable28\" id=\"tiltable28\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0030";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball29\"><img class=\"tiltable29\" id=\"tiltable29\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0031";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball30\"><img class=\"tiltable30\" id=\"tiltable30\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0032";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball31\"><img class=\"tiltable22\" id=\"tiltable31\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0033";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball32\"><img class=\"tiltable32\" id=\"tiltable32\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0034";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball33\"><img class=\"tiltable33\" id=\"tiltable33\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0035";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball34\"><img class=\"tiltable34\" id=\"tiltable34\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0036";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball35\"><img class=\"tiltable35\" id=\"tiltable26\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0037";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball36\"><img class=\"tiltable36\" id=\"tiltable27\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+	       
+	        value = "0038";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball37\"><img class=\"tiltable37\" id=\"tiltable37\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0039";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball38\"><img class=\"tiltable38\" id=\"tiltable38\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0040";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball39\"><img class=\"tiltable39\" id=\"tiltable39\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0041";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball40\"><img class=\"tiltable40\" id=\"tiltable40\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0042";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball41\"><img class=\"tiltable41\" id=\"tiltable41\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0043";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball42\"><img class=\"tiltable42\" id=\"tiltable42\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0044";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball43\"><img class=\"tiltable43\" id=\"tiltable43\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0045";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball44\"><img class=\"tiltable44\" id=\"tiltable44\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+            value = "0046";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "<div class=\"ball45\"><img class=\"tiltable45\" id=\"tiltable45\" src=\""  + document.getElementById("filename_1").value +value +".png\"" + "/></div>" + "\n";
+      
+	       	 document.getElementById("status").value = "- processed parralax";      	       
+	       	
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + "\n";
+            document.getElementById("output_area").value  = document.getElementById("output_area").value + document.getElementById("output_script").value;
+	
+            document.getElementById("status").value = "done";
+	       	       
+	        
+	       
+	        	       	       
+	       	       
+	        
+	       
+	        	       
+	       	       
+	        
+	       
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        bulb.src = "https://www.kolabear.co.uk/green.png";
+	        
+	        
+            var userInput = document.getElementById("output_area").value;
+			
+            var blob = new Blob([userInput], { type: "text/plain;charset=utf-8" });
+            saveAs(blob, "output.html");
+	}
+	</script></body>
+</html>
